@@ -35,9 +35,13 @@
     }
 
     h2 a {
-      font-size: 3rem;
-      color: #ff0000 !important; /* couleur par défaut */
+      display: inline-block; /* pour appliquer largeur/hauteur/font correctement */
+      font-size: 3.5rem;      /* essaie même 4rem pour test */
+      line-height: 1.2;
+      color: #ff0000 !important;
       text-shadow: 0 0 5px #ff0000;
+      transition: all 0.3s ease;
+      text-decoration: none;
     }
     
     h2 a:visited {
@@ -119,14 +123,6 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
 
 
 
