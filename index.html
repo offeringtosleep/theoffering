@@ -34,6 +34,24 @@
       color: #8b0000;
     }
 
+    h2 a {
+      color: #8b0000 !important; /* couleur par défaut */
+      text-decoration: none;
+    }
+    
+    h2 a:visited {
+      color: #8b0000 !important; /* même couleur si déjà cliqué */
+    }
+    
+    h2 a:hover {
+      color: #ff0000 !important; /* rouge vif au survol */
+      text-shadow: 0 0 5px #ff0000;
+    }
+    
+    h2 a:active {
+      color: #ff3333 !important; /* pendant le clic */
+    }
+
     .pdf-container {
       width: 100%;
       max-width: 1020px;
@@ -98,6 +116,7 @@
 
 </body>
 </html>
+
 
 
 
