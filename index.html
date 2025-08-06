@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Sleep</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
 
@@ -26,20 +27,46 @@
     }
 
     .pdf-container {
-    width: 100%;
-    max-width: 1050px; /* ou essaie 500px pour un effet plus "étroit" */
-    height: 90vh;
-    overflow-y: scroll;
-    border: 2px solid #333;
-    box-shadow: 0 0 20px rgba(207, 170, 255, 0.3);
-    border-radius: 12px; /* pour adoucir les bords */
+      width: 100%;
+      max-width: 1020px;
+      height: 85vh;
+      overflow-y: scroll;
+      border: 2px solid #333;
+      box-shadow: 0 0 20px rgba(207, 170, 255, 0.3);
+      border-radius: 12px;
     }
-
 
     iframe {
       width: 100%;
       height: 100%;
       border: none;
+    }
+
+    .mobile-link {
+      display: none;
+      max-width: 600px;
+      padding: 1rem;
+      text-align: center;
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(207, 170, 255, 0.1);
+    }
+
+    .mobile-link a {
+      color: #cfaaff;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 768px) {
+      .pdf-container {
+        display: none;
+      }
+
+      .mobile-link {
+        display: block;
+      }
     }
   </style>
 </head>
@@ -47,8 +74,15 @@
 
   <h1>🜃 THE OFFERING 🜃</h1>
 
+  <!-- Version Desktop -->
   <div class="pdf-container">
     <iframe src="./library/The Offering.pdf#toolbar=0&scrollbar=0" type="application/pdf"></iframe>
+  </div>
+
+  <!-- Version Mobile -->
+  <div class="mobile-link">
+    📄 Ce comic est mieux consulté sur un ordinateur.<br>
+    👉 <a href="./library/The Offering.pdf" target="_blank">Ouvrir le PDF</a>
   </div>
 
 </body>
