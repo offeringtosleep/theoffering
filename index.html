@@ -91,7 +91,22 @@
     h2 a:active {
       color: #ff6666 !important;
     }
+    
+    .pdf-container {
+      width: 100%;
+      max-width: 1020px;
+      height: 85vh;
+      overflow-y: scroll;
+      border: 2px solid #333;
+      box-shadow: 0 0 20px rgba(207, 170, 255, 0.3);
+      border-radius: 12px;
+    }
 
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
 
     .mobile-link {
       display: none;
@@ -107,7 +122,10 @@
     .mobile-link p {
       margin: 0.5rem 0;
     }
-
+    @media (max-width: 768px) {
+      .pdf-container {
+        display: none;
+      }
       .mobile-link {
         display: block;
       }
@@ -125,6 +143,12 @@
   <h1>🜃 The Offering 🜃</h1>
 
 
+  <!-- Version Desktop : PDF intégré -->
+  <div class="pdf-container">
+    <iframe src="./library/The Offering.pdf#toolbar=0&scrollbar=0" type="application/pdf"></iframe>
+  </div>
+
+  
   <!-- Version Mobile -->
   <div class="mobile-link">
     <p>What Might Be Good For Your Heart</p>
@@ -135,6 +159,7 @@
 
 </body>
 </html>
+
 
 
 
