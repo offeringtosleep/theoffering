@@ -7,6 +7,42 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
 
+    /* --- LOGO OVERLAY --- */
+    #logo-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #0d0d0d;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      animation: fadeOut 2.5s ease 2s forwards;
+    }
+
+    #logo-overlay img {
+      width: 150px;
+      height: auto;
+      opacity: 0;
+      animation: fadeInLogo 2s ease forwards;
+      filter: drop-shadow(0 0 15px #cfaaff);
+    }
+
+    @keyframes fadeInLogo {
+      from { opacity: 0; transform: scale(0.8); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    /* --- BASE STYLE --- */
     body {
       margin: 0;
       background-color: #0d0d0d;
@@ -35,28 +71,25 @@
     }
 
     h2 a {
-      display: inline-block; /* pour appliquer largeur/hauteur/font correctement */
-      font-size: 3.5rem;      /* essaie même 4rem pour test */
-      line-height: 1.2;
+      display: inline-block;
+      font-size: 3rem;
       color: #ff0000 !important;
       text-shadow: 0 0 5px #ff0000;
-      transition: all 0.3s ease;
       text-decoration: none;
+      transition: all 0.3s ease;
     }
-    
+
     h2 a:visited {
-      color: #ff0000 !important; /* même couleur si déjà cliqué */
-      text-shadow: 0 0 5px #ff0000;
+      color: #ff0000 !important;
     }
-    
+
     h2 a:hover {
-      color: #ff0000 !important; /* rouge vif au survol */
-      text-shadow: 0 0 5px #ff0000;
+      color: #ff3333 !important;
+      text-shadow: 0 0 8px #ff0000;
     }
-    
+
     h2 a:active {
-      color: #ff3333 !important; /* pendant le clic */
-      text-shadow: 0 0 5px #ff0000;
+      color: #ff6666 !important;
     }
 
     .pdf-container {
@@ -86,10 +119,8 @@
       box-shadow: 0 0 10px rgba(207, 170, 255, 0.1);
     }
 
-    .mobile-link a {
-      color: ##8b0000;
-      text-decoration: none;
-      font-size: 1.6rem;
+    .mobile-link p {
+      margin: 0.5rem 0;
     }
 
     @media (max-width: 768px) {
@@ -105,6 +136,12 @@
 </head>
 <body>
 
+  <!-- Logo overlay -->
+  <div id="logo-overlay">
+    <img src="./library/logo-sleep.png" alt="Sleep Token Logo">
+  </div>
+
+  <!-- Titre -->
   <h1>🜃 THE OFFERING 🜃</h1>
 
   <!-- Version Desktop -->
@@ -116,15 +153,9 @@
   <div class="mobile-link">
     <p>What Might Be Good For Your Heart</p>
     <p>Might Not Be Good For My Head</p>
-    
-    
+    <br>
     <h2><a href="./library/The Offering.pdf" target="_blank">Open The Offering</a></h2>
   </div>
 
 </body>
 </html>
-
-
-
-
-
